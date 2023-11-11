@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url(../fonts/Ubuntu-Regular.woff2) format('woff2'),
+    url(../fonts/Ubuntu-Regular.woff) format('woff'),
+    url(../fonts/Ubuntu-Regular.ttf) format('ttf');
+}
+
+body {
+    background: #d5ffd5;
+    font-family: Ubuntu-Regular, cursive;
+    font-size: 1.5rem;
+}
+
+h1,
+th,
+caption{
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-control {
+    display: inline-block;
+}
+
+.table {
+    counter-reset: counter -1;
+}
+
+.table tr::before {
+    counter-increment: counter;
+}
+
+.table tr:before {
+    content: counter(counter);
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 10px;
+    background-color: var(--bs-table-bg);
+}
+
+.table thead tr::before {
+    content: "№";
+    background-color: var(--bs-table-bg);
+}
+
+
+
+
+
